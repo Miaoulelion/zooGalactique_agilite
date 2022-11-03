@@ -1,5 +1,4 @@
-package zoo;
-
+package Zoo_Project;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Ville
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
+    // variables d'instance
     private Zoo unZoo;
     private int montantAidesZooTotal;
     
@@ -29,8 +28,7 @@ public class Ville
     /**
      * Constructeur d'objets de classe Ville
      */
-    public Ville()
-    {
+    public Ville(){
         // initialisation des variables d'instance
     }
 
@@ -38,16 +36,20 @@ public class Ville
         return this.montantAidesZooTotal;
     }
 
-    public int calcAides()
-    {
-        ArrayList<Integer> lstAttributs = this.unZoo.getAttributs();
-        int nbVisiteurs = lstAttributs.get(0);
-        int superficie = lstAttributs.get(1);
+    public int getMontantAidesZoo(){
+        ArrayList<Integer> nombreVisiteursEtSuperficieZoo = this.unZoo.getNombreVisiteursEtSuperficie();
+        int nombreVisiteurs = nombreVisiteursEtSuperficieZoo.get(0);
+        int superficie = nombreVisiteursEtSuperficieZoo.get(1);
         
-        superficie = superficie / 1000;
-        int valCalc = (nbVisiteurs / superficie) * 100;
-        this.montantAidesZooTotal += valCalc;
+        calculAides(nombreVisiteurs, superficie);
         
         return this.montantAidesZooTotal;
     }
+
+	private void calculAides(int nombreVisiteurs, int superficie){
+		superficie = superficie / 1000;
+        int valCalc = (nombreVisiteurs / superficie) * 100;
+        this.montantAidesZooTotal += valCalc;
+	}
+
 }
