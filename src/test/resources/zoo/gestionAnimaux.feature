@@ -7,28 +7,26 @@ Feature: Gestion des animaux
 	Je souhaite pouvoir ajouter, modifier ou supprimer un animal de mon Zoo
 	Afin d adapter l offre pour mes clients
 
-  Scenario Outline: Ajouter un animal dans le Zoo 
-  Given un zoo souhaitant ajouter <animal1> parmi ses animaux
+  Scenario: Ajouter un animal dans le Zoo 
+  Given un zoo souhaitant ajouter un animal parmi ses animaux
   When  un zoo accueille un nouvel animal 
-  Then  <animal1> est dans la liste <lstAnimaux1> du zoo
+  Then  un animal est dans la liste d animaux du zoo
   
   
   
-  Scenario Outline: Modifier un animal du Zoo 
-  Given un zoo souhaitant modifier <animal1> parmi ses animaux
+  Scenario: Modifier un animal du Zoo 
+  Given un zoo souhaitant modifier un animal parmi ses animaux
   When  un zoo le souhaite 
-  Then  <animal1> est modifié
+  Then  un animal est modifie
   
   
-  Scenario Outline: Supprimer un animal du Zoo lors d un transfert
-  Given un zoo souhaitant supprimer <animal1> de ses animaux
-  When  un zoo transfère <animal1> 
-  Then  <animal1> est supprimé de la liste <lstAnimaux1> du zoo
+  Scenario: Supprimer un animal du Zoo lors d un transfert
+  Given un zoo souhaitant supprimer un animal de ses animaux
+  When  un zoo transfere un animal
+  Then  un animal est supprime de la liste d animaux du zoo
   
 
-  Scenario Outline: Supprimer un animal du Zoo lors d un décès
-  Given un zoo souhaitant supprimer <animal1> de ses animaux
-  When  lorsque <animal1> décède
-  Then  <animal1> est supprimé de la liste <lstAnimaux1> du zoo
-  
-  
+  Scenario: Supprimer un animal du Zoo lors d un décès
+  Given un zoo souhaitant supprimer un animal de ses animaux
+  When  lorsque un animal decede
+  Then  un animal est supprime de la liste des animaux du zoo

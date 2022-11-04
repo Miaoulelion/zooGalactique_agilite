@@ -6,6 +6,4 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)  
 @CucumberOptions(strict = true) 
-public class RunCucumberTest {
-
-}
+public class RunCucumberTest {}

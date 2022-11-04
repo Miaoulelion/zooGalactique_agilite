@@ -1,0 +1,75 @@
+package zoo;
+
+import cucumber.api.PendingException;  
+import cucumber.api.java.en.Given;  
+import cucumber.api.java.en.Then;  
+import cucumber.api.java.en.When;  
+
+public class GestionAnimauxSteps {
+	@Given("un zoo souhaitant ajouter un animal parmi ses animaux")
+	public void un_zoo_souhaitant_ajouter_un_animal_parmi_ses_animaux() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("un zoo accueille un nouvel animal")
+	public void un_zoo_accueille_un_nouvel_animal() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("un animal est dans la liste d animaux du zoo")
+	public void un_animal_est_dans_la_liste_d_animaux_du_zoo() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Given("un zoo souhaitant modifier un animal parmi ses animaux")
+	public void un_zoo_souhaitant_modifier_un_animal_parmi_ses_animaux() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("un zoo le souhaite")
+	public void un_zoo_le_souhaite() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("un animal est modifie")
+	public void un_animal_est_modifie() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Given("un zoo souhaitant supprimer un animal de ses animaux")
+	public void un_zoo_souhaitant_supprimer_un_animal_de_ses_animaux() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("un zoo transfere un animal")
+	public void un_zoo_transfere_un_animal() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("un animal est supprime de la liste d animaux du zoo")
+	public void un_animal_est_supprime_de_la_liste_d_animaux_du_zoo() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("lorsque un animal decede")
+	public void lorsque_un_animal_decede() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("un animal est supprime de la liste des animaux du zoo")
+	public void un_animal_est_supprime_de_la_liste_des_animaux_du_zoo() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+}
+
