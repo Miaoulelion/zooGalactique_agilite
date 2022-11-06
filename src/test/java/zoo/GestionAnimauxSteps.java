@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;  
 
 public class GestionAnimauxSteps {
+	
 	@Given("un zoo souhaitant ajouter un animal parmi ses animaux")
 	public void un_zoo_souhaitant_ajouter_un_animal_parmi_ses_animaux() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -23,7 +24,30 @@ public class GestionAnimauxSteps {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
+	
+	@Given("un zoo souhaitant connaitre le nombre d animaux presents en son sein")
+	public void un_zoo_souhaitant_connaitre_le_nombre_d_animaux_presents_en_son_sein() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
 
+	@When("quand il le souhaite")
+	public void quand_il_le_souhaite() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("le zoo connait desormais son nombre d animaux")
+	public void le_zoo_connait_desormais_son_nombre_d_animaux() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	
+	// ------
+	// Scenarios non implémentés
+	// ------
+	
 	@Given("un zoo souhaitant modifier un animal parmi ses animaux")
 	public void un_zoo_souhaitant_modifier_un_animal_parmi_ses_animaux() {
 	    // Write code here that turns the phrase above into concrete actions

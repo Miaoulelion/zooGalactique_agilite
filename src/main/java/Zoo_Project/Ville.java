@@ -46,7 +46,7 @@ public class Ville
         return this.montantAidesZooTotal;
     }
 
-	private void calculAides(int nombreVisiteurs, int superficie){
+	public void calculAides(int nombreVisiteurs, int superficie){
 		superficie = superficie / 1000;
         int valCalc = (nombreVisiteurs / superficie) * 100;
         this.montantAidesZooTotal += valCalc;

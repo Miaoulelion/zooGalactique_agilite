@@ -80,6 +80,10 @@ public class Zoo
         	animal.setZoo(this);
     	}
     }
+    
+    public int getNombreAnimaux() {
+    	return this.listeAnimauxPresents.size();
+    }
 
 }
 
