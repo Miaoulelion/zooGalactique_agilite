@@ -19,7 +19,7 @@ public class AssociationVilleZooSteps {
 		Assert.assertTrue(this.zoo != null);
 	}
 
-	@When("une ville s associer a un zoo")
+	@When("une ville s associe a un zoo")
 	public void une_ville_s_associer_a_un_zoo() {
 		ville.setUnZoo(zoo);
 		Assert.assertTrue(this.ville != null);

@@ -1,7 +1,7 @@
 #Author: sylvain.vitry@dauphine.eu
 #Author: hugo.jolion@dauphine.eu
 
-Feature: Associer une Ville a un Zoo
+Feature: US_000 Associer une Ville a un Zoo
 
   En tant que Ville
 	Je souhaite associer un Zoo a ma ville
@@ -9,5 +9,5 @@ Feature: Associer une Ville a un Zoo
 
   Scenario: Association d un Zoo a une Ville
     Given une ville sans Zoo
-  	When  une ville s associer a un zoo 
+  	When  une ville s associe a un zoo 
   	Then  le zoo appartient a la ville
