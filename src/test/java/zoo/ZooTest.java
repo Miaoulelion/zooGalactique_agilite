@@ -103,6 +103,19 @@ public class ZooTest
     	zooBeauval.setListeAnimauxPresents(animauxDansZoo);
     	assertEquals(animauxDansZoo, zooBeauval.getListeAnimauxPresents());
     }  
+    
+    @Test
+    public void testGetNombreAnimaux() {
+    	ArrayList<Animal> animauxDansZoo = new ArrayList<Animal>();
+    	tigre.setNom("Tigrou");
+    	lion.setNom("Simba");
+    	singe.setNom("Rafiki");
+    	animauxDansZoo.add(tigre);
+    	animauxDansZoo.add(lion);
+    	animauxDansZoo.add(singe);
+    	zooBeauval.setListeAnimauxPresents(animauxDansZoo);
+    	assertEquals(animauxDansZoo.size(), zooBeauval.getNombreAnimaux());
+    }
 }
 
 

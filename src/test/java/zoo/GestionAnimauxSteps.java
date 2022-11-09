@@ -17,39 +17,34 @@ public class GestionAnimauxSteps {
 	
 	@Given("un zoo souhaitant ajouter un animal parmi ses animaux")
 	public void un_zoo_souhaitant_ajouter_un_animal_parmi_ses_animaux() {
-		zoo.ajouterAnimal(tigre);
 	    Assert.assertTrue(this.zoo != null);
 	    Assert.assertTrue(this.tigre != null);
+	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == false);
 	}
 
 	@When("un zoo accueille un nouvel animal")
 	public void un_zoo_accueille_un_nouvel_animal() {
-	    // Write code here that turns the phrase above into concrete actions
+		zoo.ajouterAnimal(tigre);
 		Assert.assertTrue(this.zoo != null);
 	    Assert.assertTrue(this.tigre != null);
 	}
 
 	@Then("un animal est dans la liste d animaux du zoo")
 	public void un_animal_est_dans_la_liste_d_animaux_du_zoo() {
-	    // Write code here that turns the phrase above into concrete actions
 		Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == true);
 	}
 	
 	@Given("un zoo souhaitant connaitre le nombre d animaux presents en son sein")
 	public void un_zoo_souhaitant_connaitre_le_nombre_d_animaux_presents_en_son_sein() {
-	    // Write code here that turns the phrase above into concrete actions
-		
 		zoo.ajouterAnimal(tigre);
 		zoo.ajouterAnimal(lion);
 	    Assert.assertTrue(this.zoo != null);
 	    Assert.assertTrue(this.lion != null);
 	    Assert.assertTrue(this.tigre != null);
-	    
 	}
 
 	@When("quand il le souhaite")
 	public void quand_il_le_souhaite() {
-	    // Write code here that turns the phrase above into concrete actions
 		Assert.assertTrue(this.zoo != null);
 	    Assert.assertTrue(this.lion != null);
 	    Assert.assertTrue(this.tigre != null);
@@ -57,7 +52,6 @@ public class GestionAnimauxSteps {
 
 	@Then("le zoo connait desormais son nombre d animaux")
 	public void le_zoo_connait_desormais_son_nombre_d_animaux() {
-	    // Write code here that turns the phrase above into concrete actions
 		Assert.assertTrue(this.zoo.getNombreAnimaux() == 2);
 	}
 
