@@ -32,6 +32,7 @@ public class GestionAnimauxSteps {
 	@Then("un animal est dans la liste d animaux du zoo")
 	public void un_animal_est_dans_la_liste_d_animaux_du_zoo() {
 		Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == true);
+		Assert.assertTrue(this.tigre.getZoo() == this.zoo);
 	}
 	
 	@Given("un zoo souhaitant connaitre le nombre d animaux presents en son sein")
