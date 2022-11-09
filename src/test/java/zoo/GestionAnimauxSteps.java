@@ -42,6 +42,8 @@ public class GestionAnimauxSteps {
 	    Assert.assertTrue(this.zoo != null);
 	    Assert.assertTrue(this.lion != null);
 	    Assert.assertTrue(this.tigre != null);
+	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == true);
+	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(lion) == true);
 	}
 
 	@When("quand il le souhaite")
