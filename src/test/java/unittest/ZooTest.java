@@ -1,13 +1,13 @@
-package zoo;
+package unittest;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Zoo_Project.Animal;
-import Zoo_Project.Ville;
-import Zoo_Project.Zoo;
+import zoo.Animal;
+import zoo.Ville;
+import zoo.Zoo;
 
 import java.util.ArrayList;
 
