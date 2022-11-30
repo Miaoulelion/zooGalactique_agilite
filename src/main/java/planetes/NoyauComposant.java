@@ -73,4 +73,5 @@ public class NoyauComposant implements ComposantPlanete {
 			return false;
 		return true;
 	}
+
 }
