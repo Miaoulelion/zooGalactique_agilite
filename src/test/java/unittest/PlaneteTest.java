@@ -7,19 +7,19 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import planetes.Noyau;
-import planetes.Planete;
+import planetes.PlaneteComposite;
 import planetes.Satellite;
 
 public class PlaneteTest {
 
-    private Planete planeteTerre;
+    private PlaneteComposite planeteTerre;
     @SuppressWarnings("unused")
 	private Noyau noyauDeLaTerre;
     private Satellite lune;
 
     @Before
     public void setUp() {
-        this.planeteTerre = new Planete();
+        this.planeteTerre = new PlaneteComposite();
         this.noyauDeLaTerre = new Noyau(planeteTerre);
         this.lune = new Satellite(planeteTerre, "lune");
     }

@@ -6,22 +6,22 @@ import static org.junit.Assert.assertTrue;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import planetes.Planete;
+import planetes.PlaneteComposite;
 import planetes.Satellite;
 
 public class GestionSatellitesStep {
-	private Planete terre;
+	private PlaneteComposite terre;
 	private Satellite lune;
-	private Planete pluton;
+	private PlaneteComposite pluton;
 	private Satellite charon;
-	private Planete neptune;
+	private PlaneteComposite neptune;
 	private Satellite triton;
 	private Satellite nereide;
 	
 	@Given("Une terre avec une temperature et un diametre standard")
 	public void une_terre_avec_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.terre = new Planete();
+		this.terre = new PlaneteComposite();
 	}
 
 	@When("de l-ajout d-un lune")
@@ -40,7 +40,7 @@ public class GestionSatellitesStep {
 	@Given("Une pluton avec une temperature et un diametre standard")
 	public void une_pluton_avec_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.pluton = new Planete();
+		this.pluton = new PlaneteComposite();
 	}
 
 	@When("de l-ajout d-un charon")
@@ -59,7 +59,7 @@ public class GestionSatellitesStep {
 	@Given("Une neptune avec une temperature et un diametre standard")
 	public void une_neptune_avec_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.neptune = new Planete();
+		this.neptune = new PlaneteComposite();
 	}
 
 	@When("de l-ajout d-un triton")

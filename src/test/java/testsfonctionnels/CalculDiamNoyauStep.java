@@ -6,22 +6,22 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import planetes.Noyau;
-import planetes.Planete;
+import planetes.PlaneteComposite;
 
 public class CalculDiamNoyauStep {
-	Planete planeteRose;
+	PlaneteComposite planeteRose;
 	Noyau noyauRose;
-	Planete planeteVerte;
+	PlaneteComposite planeteVerte;
 	Noyau noyauVert;
-	Planete planeteJaune;
+	PlaneteComposite planeteJaune;
 	Noyau noyauJaune;
-	Planete planeteGrise;
+	PlaneteComposite planeteGrise;
 	Noyau noyauGris;
 
 	@Given("Une planeteRose avec un noyauRose et une temperature et un diametre standard")
 	public void une_planeteRose_avec_un_noyauRose_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.planeteRose = new Planete();
+		this.planeteRose = new PlaneteComposite();
 		this.noyauRose = new Noyau(this.planeteRose);
 	}
 
@@ -40,7 +40,7 @@ public class CalculDiamNoyauStep {
 	@Given("Une planeteVerte avec un noyauVert et une temperature et un diametre standard")
 	public void une_planeteVerte_avec_un_noyauVert_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-	    this.planeteVerte = new Planete();
+	    this.planeteVerte = new PlaneteComposite();
 	    this.noyauVert = new Noyau(this.planeteVerte);
 	}
 
@@ -59,7 +59,7 @@ public class CalculDiamNoyauStep {
 	@Given("Une planeteJaune avec un noyauJaune et une temperature et un diametre standard")
 	public void une_planeteJaune_avec_un_noyauJaune_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.planeteJaune = new Planete();
+		this.planeteJaune = new PlaneteComposite();
 		this.noyauJaune = new Noyau(this.planeteJaune);
 	}
 
@@ -78,7 +78,7 @@ public class CalculDiamNoyauStep {
 	@Given("Une planeteGrise avec un noyauGris et une temperature et un diametre standard")
 	public void une_planeteGrise_avec_un_noyauGris_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
-	    this.planeteGrise = new Planete();
+	    this.planeteGrise = new PlaneteComposite();
 	    this.noyauGris = new Noyau(this.planeteGrise);
 	}
 

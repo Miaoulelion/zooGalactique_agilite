@@ -8,14 +8,14 @@ package planetes;
  * @author (Nicolas, Anis)
  */
 public class Satellite {
-	private Planete planete;
+	private PlaneteComposite planete;
 	private String nom;
 	
 	public Satellite(String nom) {
 		this.nom = nom;
 	}
 	
-	public Satellite(Planete planete, String nom) {
+	public Satellite(PlaneteComposite planete, String nom) {
 		this.setPlanete(planete);
 		this.nom = nom;
 	}
@@ -26,7 +26,7 @@ public class Satellite {
 	 * @param planete
 	 */
 	
-	public void setPlanete(Planete planete) {
+	public void setPlanete(PlaneteComposite planete) {
 		if(planete == null) {
 			throw new IllegalArgumentException("Une satelite ne peut avoir une planete == null");
 		}
@@ -43,7 +43,7 @@ public class Satellite {
 	 * @return La planète autour de laquelle notre petit satellite gravite.
 	 */
 	
-	public Planete getPlanete() {
+	public PlaneteComposite getPlanete() {
 		return this.planete;
 	}
 

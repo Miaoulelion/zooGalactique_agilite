@@ -6,18 +6,17 @@ package planetes;
  * Il s'agit d'un brûlant au centre de ces planètes.
  * @author (Nicolas, Anis)
  */
-public class Noyau
-{
-    private Planete planete;
+public class Noyau implements ComposantPlanete {
+    private PlaneteComposite planete;
     
     /**
      * Constructeur d'objets de classe Noyau
      */
     
-    public Noyau(Planete planete)
+    public Noyau(PlaneteComposite planete)
     {
     	this.setPlanete(planete);
-        planete.setNoyau(this);
+        planete.addComposant(this);
     }
     
     /**
@@ -28,7 +27,7 @@ public class Noyau
      * @param planete
      */
     
-    private void setPlanete(Planete planete){
+    private void setPlanete(PlaneteComposite planete){
         if(planete==null){
             throw new IllegalArgumentException("Il n'y a pas de planète, planète == null");
         }

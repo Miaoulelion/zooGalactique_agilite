@@ -8,22 +8,23 @@ import java.util.LinkedList;
  * (Promis pas d'astéroïde)
  * @author (Nicolas, Anis)
  */
-public class Planete {
+public class PlaneteComposite {
     // Variables d'instance représentant les principales caractéristiques 
     // d'une planète
     private int diametre;
     private int temperatureMoyenne;
-    private Noyau noyau;
+    private LinkedList<ComposantPlanete> composantsPlanete;
     private LinkedList<Satellite> satellites;
 
     /**
      * Constructeur d'objets de classe Planete
      */
     
-    public Planete(int diametre, int temp){
+    public PlaneteComposite(int diametre, int temp){
     	this.setTemperatureMoyenne(temp);
     	this.setDiametre(diametre);
         this.satellites = new LinkedList<Satellite>();
+        this.composantsPlanete = new LinkedList<ComposantPlanete>();
     }
     
     /**
@@ -31,23 +32,18 @@ public class Planete {
      * plutôt chaud...
      */
     
-    public Planete(){
+    public PlaneteComposite(){
     	this.setDiametre(100);
     	this.setTemperatureMoyenne(100);
         this.satellites = new LinkedList<Satellite>();
+        this.composantsPlanete = new LinkedList<ComposantPlanete>();
     }
     
-    /**
-     * Une planète suffisamment jeune et dynamique peut posséder un noyau.
-     * Cette méthode permet d'ajouter un noyau à une planète.
-     * @param noyau
-     */
-    
-    public void setNoyau(Noyau noyau){
-        if(noyau==null){
-            throw new IllegalArgumentException("Il n'y a pas de noyau, noyau == null");
-        }
-        this.noyau=noyau;
+    public void addComposant(ComposantPlanete composant) {
+    	if(composant == null) {
+    		throw new IllegalArgumentException();
+    	}
+    	this.composantsPlanete.add(composant);
     }
 
     /**
@@ -93,7 +89,12 @@ public class Planete {
      * Getter du noyau de la planète.
      */
     public Noyau getNoyau(){
-        return this.noyau;
+    	for(ComposantPlanete composant : this.composantsPlanete) {
+    		if(composant instanceof Noyau) {
+    			return (Noyau) composant;
+    		}
+    	}//A changer pour faire plus propre
+        return null;
     }
     
     /**
@@ -140,13 +141,13 @@ public class Planete {
 			this.satellites.remove(satellite);
 		}
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((composantsPlanete == null) ? 0 : composantsPlanete.hashCode());
 		result = prime * result + diametre;
-		result = prime * result + ((noyau == null) ? 0 : noyau.hashCode());
 		result = prime * result + ((satellites == null) ? 0 : satellites.hashCode());
 		result = prime * result + temperatureMoyenne;
 		return result;
@@ -160,13 +161,13 @@ public class Planete {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Planete other = (Planete) obj;
-		if (diametre != other.diametre)
-			return false;
-		if (noyau == null) {
-			if (other.noyau != null)
+		PlaneteComposite other = (PlaneteComposite) obj;
+		if (composantsPlanete == null) {
+			if (other.composantsPlanete != null)
 				return false;
-		} else if (!noyau.equals(other.noyau))
+		} else if (!composantsPlanete.equals(other.composantsPlanete))
+			return false;
+		if (diametre != other.diametre)
 			return false;
 		if (satellites == null) {
 			if (other.satellites != null)
@@ -177,6 +178,8 @@ public class Planete {
 			return false;
 		return true;
 	}
+	
+	
 
 
 }
