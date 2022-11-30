@@ -35,7 +35,7 @@ public class Noyau
         this.planete=planete;
     }
     
-    public int getTruc() {
+    public int getDiametre() {
     	return this.planete.getDiametre();
     }
 
