@@ -34,10 +34,6 @@ public class Noyau
         }
         this.planete=planete;
     }
-    
-    public int getDiametre() {
-    	return this.planete.getDiametre();
-    }
 
     /**
      * Le noyau n'est pas visible au commun des mortels. 
