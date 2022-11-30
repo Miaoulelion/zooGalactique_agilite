@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import planetes.Noyau;
+import planetes.NoyauComposant;
 import planetes.PlaneteComposite;
 import planetes.Satellite;
 
@@ -14,13 +14,13 @@ public class PlaneteTest {
 
     private PlaneteComposite planeteTerre;
     @SuppressWarnings("unused")
-	private Noyau noyauDeLaTerre;
+	private NoyauComposant noyauDeLaTerre;
     private Satellite lune;
 
     @Before
     public void setUp() {
         this.planeteTerre = new PlaneteComposite();
-        this.noyauDeLaTerre = new Noyau(planeteTerre);
+        this.noyauDeLaTerre = new NoyauComposant(planeteTerre);
         this.lune = new Satellite(planeteTerre, "lune");
     }
     

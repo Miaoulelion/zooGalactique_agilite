@@ -6,14 +6,14 @@ package planetes;
  * Il s'agit d'un brûlant au centre de ces planètes.
  * @author (Nicolas, Anis)
  */
-public class Noyau implements ComposantPlanete {
+public class NoyauComposant implements ComposantPlanete {
     private PlaneteComposite planete;
     
     /**
      * Constructeur d'objets de classe Noyau
      */
     
-    public Noyau(PlaneteComposite planete)
+    public NoyauComposant(PlaneteComposite planete)
     {
     	this.setPlanete(planete);
         planete.addComposant(this);
@@ -65,7 +65,7 @@ public class Noyau implements ComposantPlanete {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Noyau other = (Noyau) obj;
+		NoyauComposant other = (NoyauComposant) obj;
 		if (planete == null) {
 			if (other.planete != null)
 				return false;

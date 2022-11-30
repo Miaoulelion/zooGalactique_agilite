@@ -8,7 +8,7 @@ import java.util.LinkedList;
  * (Promis pas d'astéroïde)
  * @author (Nicolas, Anis)
  */
-public class PlaneteComposite {
+public class PlaneteComposite implements ComposantPlanete {
     // Variables d'instance représentant les principales caractéristiques 
     // d'une planète
     private int diametre;
@@ -88,10 +88,10 @@ public class PlaneteComposite {
     /**
      * Getter du noyau de la planète.
      */
-    public Noyau getNoyau(){
+    public NoyauComposant getNoyau(){
     	for(ComposantPlanete composant : this.composantsPlanete) {
-    		if(composant instanceof Noyau) {
-    			return (Noyau) composant;
+    		if(composant instanceof NoyauComposant) {
+    			return (NoyauComposant) composant;
     		}
     	}//A changer pour faire plus propre
         return null;

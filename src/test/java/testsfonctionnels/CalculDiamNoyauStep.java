@@ -5,24 +5,24 @@ import static org.junit.Assert.assertEquals;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import planetes.Noyau;
+import planetes.NoyauComposant;
 import planetes.PlaneteComposite;
 
 public class CalculDiamNoyauStep {
 	PlaneteComposite planeteRose;
-	Noyau noyauRose;
+	NoyauComposant noyauRose;
 	PlaneteComposite planeteVerte;
-	Noyau noyauVert;
+	NoyauComposant noyauVert;
 	PlaneteComposite planeteJaune;
-	Noyau noyauJaune;
+	NoyauComposant noyauJaune;
 	PlaneteComposite planeteGrise;
-	Noyau noyauGris;
+	NoyauComposant noyauGris;
 
 	@Given("Une planeteRose avec un noyauRose et une temperature et un diametre standard")
 	public void une_planeteRose_avec_un_noyauRose_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.planeteRose = new PlaneteComposite();
-		this.noyauRose = new Noyau(this.planeteRose);
+		this.noyauRose = new NoyauComposant(this.planeteRose);
 	}
 
 	@When("modification de la temperature {int} de la planete planeteRose")
@@ -41,7 +41,7 @@ public class CalculDiamNoyauStep {
 	public void une_planeteVerte_avec_un_noyauVert_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
 	    this.planeteVerte = new PlaneteComposite();
-	    this.noyauVert = new Noyau(this.planeteVerte);
+	    this.noyauVert = new NoyauComposant(this.planeteVerte);
 	}
 
 	@When("modification de la temperature {int} de la planete planeteVerte")
@@ -60,7 +60,7 @@ public class CalculDiamNoyauStep {
 	public void une_planeteJaune_avec_un_noyauJaune_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.planeteJaune = new PlaneteComposite();
-		this.noyauJaune = new Noyau(this.planeteJaune);
+		this.noyauJaune = new NoyauComposant(this.planeteJaune);
 	}
 
 	@When("modification du diametre vers {int} km de la planete planeteJaune")
@@ -79,7 +79,7 @@ public class CalculDiamNoyauStep {
 	public void une_planeteGrise_avec_un_noyauGris_et_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
 	    this.planeteGrise = new PlaneteComposite();
-	    this.noyauGris = new Noyau(this.planeteGrise);
+	    this.noyauGris = new NoyauComposant(this.planeteGrise);
 	}
 
 	@When("modification du diametre vers {int} km de la planete planeteGrise")
