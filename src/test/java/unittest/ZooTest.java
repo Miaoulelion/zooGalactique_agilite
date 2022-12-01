@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import zoo.Animal;
+import zoo.AnimalFactory;
 import zoo.Ville;
 import zoo.Zoo;
 
@@ -43,9 +44,9 @@ public class ZooTest
         zooBeauval = new Zoo();
         beauval = new Ville();
         zooBeauval.setVille(beauval);
-        tigre = new Animal();
-    	lion = new Animal();
-    	singe = new Animal();
+        tigre = AnimalFactory.getTigre();
+    	lion = AnimalFactory.getLion();
+    	singe = AnimalFactory.getSinge();
     }
 
     /**
