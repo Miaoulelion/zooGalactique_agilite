@@ -19,6 +19,5 @@ public final class Univers {
 	
 	public static LinkedList<Planete> getPlanetes() {
 		return planetes;
-	}
-	
+	}	
 }
