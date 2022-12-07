@@ -1,25 +1,22 @@
 package zoo;
 
-public class Animal {
+public abstract class Animal {
 	
 	private Zoo zoo;
 	private String nom;
-	private String type;
 	private float poids;
 	private int taille;
 	
 	public Animal(){
 		this.zoo=null;
 		this.nom="";
-		this.type="";
 		this.poids=0.0f;
 		this.taille=0;
 	}
 	
-	public Animal(Zoo zoo, String nom, String type, float poids, int taille){
+	public Animal(Zoo zoo, String nom, float poids, int taille){
 		this.zoo = zoo;
 		this.nom = nom;
-		this.type = type;
 		this.poids = poids;
 		this.taille = taille;
 	}
@@ -46,14 +43,6 @@ public class Animal {
 	
 	public void setNom(String nom){
 		this.nom = nom;
-	}
-	
-	public String getType(){
-		return type;
-	}
-	
-	public void setType(String type){
-		this.type = type;
 	}
 	
 	public float getPoids(){
