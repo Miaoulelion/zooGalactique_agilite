@@ -34,7 +34,7 @@ public class Satellite {
 		//Il se peut que ce satellite appartienne déjà à une planète, il ne faudrait pas qu'il 
 		//appartienne deux fois à cette planète.
 		if(!planete.getSatellites().contains(this)) {
-			planete.ajouterSatellite(this);
+			planete.addSatellite(this);
 		}
 	}
 	

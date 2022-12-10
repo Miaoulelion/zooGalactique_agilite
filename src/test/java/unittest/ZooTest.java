@@ -1,10 +1,9 @@
 package unittest;
 import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import zoo.Animal;
 import zoo.AnimalFactory;
 import zoo.Ville;
@@ -39,7 +38,7 @@ public class ZooTest
      *
      * Méthode appelée avant chaque appel de méthode de test.
      */
-    @BeforeEach
+    @Before
     public void setUp(){
         zooBeauval = new Zoo();
         beauval = new Ville();
@@ -54,7 +53,7 @@ public class ZooTest
      *
      * Méthode appelée après chaque appel de méthode de test.
      */
-    @AfterEach
+    @After
     public void tearDown(){
         //Lib�rez ici les ressources engag�es par setUp()
     }
@@ -65,7 +64,7 @@ public class ZooTest
     }
 
     @Test
-    public void getNbVisiteursEtSuperficie(){
+    public void testGetNbVisiteursEtSuperficie(){
         ArrayList<Integer> nombreVisiteursEtSuperficieZoo = new ArrayList<Integer>();
         nombreVisiteursEtSuperficieZoo.add(zooBeauval.getNombreVisiteurs());
         nombreVisiteursEtSuperficieZoo.add(zooBeauval.getSuperficie());

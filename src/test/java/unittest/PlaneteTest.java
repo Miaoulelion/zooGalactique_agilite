@@ -63,7 +63,7 @@ public class PlaneteTest {
     	
     	//Pour supprimer un satellite, il faut passer par la méthode supprimerSatellite()
     	//On vérifie que tout est bien encapsulé comme on l'a souhaité.
-    	this.planeteTerre.supprimerSatellite(uniqueSatelliteDeLaTerre);
+    	this.planeteTerre.deleteSatellite(uniqueSatelliteDeLaTerre);
     	assertTrue(this.planeteTerre.getSatellites().size() == 0);
     }
     

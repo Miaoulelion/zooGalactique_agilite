@@ -28,7 +28,7 @@ public class GestionSatellitesStep {
 	public void de_l_ajout_d_un_lune() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.lune = new Satellite("lune");
-		this.terre.ajouterSatellite(this.lune);
+		this.terre.addSatellite(this.lune);
 	}
 
 	@Then("Le satellite luneEstEnOrbite dans la liste de satellite")
@@ -47,7 +47,7 @@ public class GestionSatellitesStep {
 	public void de_l_ajout_d_un_charon() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.charon = new Satellite("charon");
-		this.pluton.ajouterSatellite(this.charon);
+		this.pluton.addSatellite(this.charon);
 	}
 
 	@Then("Le satellite charonEstEnOrbite dans la liste de satellite")
@@ -66,7 +66,7 @@ public class GestionSatellitesStep {
 	public void de_l_ajout_d_un_triton() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.triton = new Satellite("triton");
-		this.neptune.ajouterSatellite(this.triton);
+		this.neptune.addSatellite(this.triton);
 	}
 
 	@Then("Le satellite tritonEstEnOrbite dans la liste de satellite")
@@ -79,7 +79,7 @@ public class GestionSatellitesStep {
 	public void de_l_ajout_d_un_nereide() {
 	    // Write code here that turns the phrase above into concrete actions
 		this.nereide = new Satellite("nereide");
-		this.neptune.ajouterSatellite(this.nereide);
+		this.neptune.addSatellite(this.nereide);
 	}
 
 	@Then("Le satellite nereideEstEnOrbite dans la liste de satellite")
@@ -91,7 +91,7 @@ public class GestionSatellitesStep {
 	@When("de la suppression d-un lune de l-orbite de la planete terre")
 	public void de_la_suppression_d_un_lune_de_l_orbite_de_la_planete_terre() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.terre.supprimerSatellite(this.lune);
+		this.terre.deleteSatellite(this.lune);
 	}
 
 	@Then("Le satellite luneNEstPlusEnOrbite dans la liste de satellite")
@@ -103,7 +103,7 @@ public class GestionSatellitesStep {
 	@When("de la suppression d-un triton de l-orbite de la planete neptune")
 	public void de_la_suppression_d_un_triton_de_l_orbite_de_la_planete_neptune() {
 	    // Write code here that turns the phrase above into concrete actions
-		this.neptune.supprimerSatellite(this.triton);
+		this.neptune.deleteSatellite(this.triton);
 	}
 
 	@Then("Le satellite tritonNEstPlusEnOrbite dans la liste de satellite")
@@ -115,7 +115,7 @@ public class GestionSatellitesStep {
 	@When("de la suppression d-un nereide de l-orbite de la planete neptune")
 	public void de_la_suppression_d_un_nereide_de_l_orbite_de_la_planete_neptune() {
 	    // Write code here that turns the phrase above into concrete actions
-	    this.neptune.supprimerSatellite(this.nereide);
+	    this.neptune.deleteSatellite(this.nereide);
 	}
 
 	@Then("Le satellite nereideNEstPlusEnOrbite dans la liste de satellite")

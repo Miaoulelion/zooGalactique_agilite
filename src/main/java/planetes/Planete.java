@@ -111,7 +111,7 @@ public class Planete {
      * @param une Planete
      */
     
-    public void ajouterSatellite(Satellite satellite) {
+    public void addSatellite(Satellite satellite) {
     	if(satellite == null) {
     		throw new IllegalArgumentException("Ajout de planète == null non valide");
     	}
@@ -135,7 +135,7 @@ public class Planete {
 	 * @param satellite
 	 */
 	
-	public void supprimerSatellite(Satellite satellite) {
+	public void deleteSatellite(Satellite satellite) {
 		if(this.satellites.contains(satellite)) {
 			this.satellites.remove(satellite);
 		}
