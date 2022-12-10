@@ -9,6 +9,7 @@ import org.junit.Test;
 import planetes.Noyau;
 import planetes.Planete;
 import planetes.Satellite;
+import zoo.Ville;
 
 public class PlaneteTest {
 
@@ -16,16 +17,18 @@ public class PlaneteTest {
     @SuppressWarnings("unused")
 	private Noyau noyauDeLaTerre;
     private Satellite lune;
+    private Ville ville;
 
     @Before
     public void setUp() {
         this.planeteTerre = new Planete();
         this.noyauDeLaTerre = new Noyau(planeteTerre);
         this.lune = new Satellite(planeteTerre, "lune");
+        this.ville = new Ville();
     }
     
     @Test
-    public void diametreEtTemperatureTest(){
+    public void testDiametreEtTemperature(){
         assertEquals(100,this.planeteTerre.getDiametre());
         assertEquals(100,this.planeteTerre.getTemperatureMoyenne());
         this.planeteTerre.setDiametre(50);
@@ -35,7 +38,7 @@ public class PlaneteTest {
     }
     
     @Test
-    public void diametreApproximatifNoyauTest(){
+    public void testDiametreApproximatifNoyau(){
     	int diamApproximatif = 0; 
         int diametrePlanete = this.planeteTerre.getDiametreEtTemperatureMoyenne()[0];
         int temperaturePlanete = this.planeteTerre.getDiametreEtTemperatureMoyenne()[1];
@@ -45,7 +48,7 @@ public class PlaneteTest {
     }
     
     @Test
-    public void listeDesSatellitesEnOrbiteTest() {
+    public void testListeDesSatellitesEnOrbite() {
     	//On retourne les satellites de la terre
     	LinkedList<Satellite> listeDesSatellites = this.planeteTerre.getSatellites();
     	listeDesSatellites.remove();
@@ -65,6 +68,15 @@ public class PlaneteTest {
     	//On vérifie que tout est bien encapsulé comme on l'a souhaité.
     	this.planeteTerre.deleteSatellite(uniqueSatelliteDeLaTerre);
     	assertTrue(this.planeteTerre.getSatellites().size() == 0);
+    }
+    
+    @Test
+    public void testAddVille() {
+    	assertTrue(this.planeteTerre.getVilles().size() == 0);
+    	
+    	this.planeteTerre.addVille(this.ville);
+    	
+    	assertTrue(this.planeteTerre.getVilles().contains(this.ville));
     }
     
     @After

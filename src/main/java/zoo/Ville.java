@@ -1,6 +1,8 @@
 package zoo;
 import java.util.ArrayList;
 
+import planetes.Planete;
+
 /**
  * Décrivez votre classe Ville ici.
  *
@@ -12,6 +14,7 @@ public class Ville
     // variables d'instance
     private Zoo unZoo;
     private int montantAidesZooTotal;
+    private Planete planete;
     
     public Zoo getUnZoo(){
         return this.unZoo;
@@ -23,6 +26,14 @@ public class Ville
             unZoo.setVille(this);
         }
         this.unZoo = unZoo;
+    }
+    
+    public Planete getPlanete() {
+    	return this.planete;
+    }
+    
+    public void setPlanete(Planete planete) {
+    	this.planete = planete;
     }
     
     /**

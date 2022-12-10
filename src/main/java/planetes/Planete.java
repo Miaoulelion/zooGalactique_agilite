@@ -2,6 +2,8 @@ package planetes;
 
 import java.util.LinkedList;
 
+import zoo.Ville;
+
 /**
  * La classe planète décrit une planète et ses comportements
  * Une planète peut avoir un noyau et un ou plusieurs satellites
@@ -15,6 +17,7 @@ public class Planete {
     private int temperatureMoyenne;
     private Noyau noyau;
     private LinkedList<Satellite> satellites;
+    private LinkedList<Ville> villes;
 
     /**
      * Constructeur d'objets de classe Planete
@@ -24,6 +27,7 @@ public class Planete {
     	this.setTemperatureMoyenne(temp);
     	this.setDiametre(diametre);
         this.satellites = new LinkedList<Satellite>();
+        this.villes = new LinkedList<Ville>();
     }
     
     /**
@@ -35,6 +39,7 @@ public class Planete {
     	this.setDiametre(100);
     	this.setTemperatureMoyenne(100);
         this.satellites = new LinkedList<Satellite>();
+        this.villes = new LinkedList<Ville>();
     }
     
     /**
@@ -138,6 +143,31 @@ public class Planete {
 	public void deleteSatellite(Satellite satellite) {
 		if(this.satellites.contains(satellite)) {
 			this.satellites.remove(satellite);
+		}
+	}
+	
+	public LinkedList<Ville> getVilles() {
+		return this.villes;
+	}
+	
+	public void setVille(LinkedList<Ville> villes) {
+        this.villes = villes;
+        for(Ville uneVille : villes) {
+        	uneVille.setPlanete(this);
+        }
+	}
+	
+	public void addVille(Ville ville) {
+		if(!villes.contains(ville)) {
+			villes.add(ville);
+			ville.setPlanete(this);
+		}
+	}
+	
+	public void deleteVille(Ville ville) {
+		if(villes.contains(ville)) {
+			villes.remove(ville);
+			ville.setPlanete(null);
 		}
 	}
 	
