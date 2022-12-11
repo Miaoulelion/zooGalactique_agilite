@@ -1,4 +1,6 @@
-#Author: Nicolas-Anis
+#Author: nicolas.berthier0@dauphine.eu
+#Author: anis.hammouche@dauphine.eu
+
 Feature: US_004 Ajout et suppression de satellites autour d-une planete
   
   En tant que scientifique, je veux pouvoir modifier l-environnement d-une planete en ajoutant ou supprimant des satellites,

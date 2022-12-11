@@ -1,4 +1,6 @@
-#Author: Nicolas-Anis
+#Author: nicolas.berthier0@dauphine.eu
+#Author: anis.hammouche@dauphine.eu
+
 Feature: US_003 Approximation du diametre d-un noyau
   
   En tant que scientifique, je veux pouvoir approximer le diametre du noyau d-une planete lorsqu-elle en possede un,

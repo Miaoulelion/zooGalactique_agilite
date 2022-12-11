@@ -33,6 +33,9 @@ public class Ville
     }
     
     public void setPlanete(Planete planete) {
+    	if(this.planete != null && !this.planete.getVilles().contains(this)) {
+    		this.planete.addVille(this);
+    	}
     	this.planete = planete;
     }
     
