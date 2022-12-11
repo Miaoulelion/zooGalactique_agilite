@@ -14,7 +14,6 @@ Feature: US_003 Approximation du diametre d-un noyau
       | planete       | noyau       | temperature | DiametreApproxime |
       | planeteRose   | noyauRose   |          50 |                75 |
       | planeteVerte  | noyauVert   |         500 |               300 |
-      | planeteOrange | noyauOrange |         600 |               420 |
 
   Scenario Outline: Approximer le diamemetre du noyau d-une planete avec des diametres differents
     Given Une <planete> avec un <noyau> et une temperature et un diametre standard
