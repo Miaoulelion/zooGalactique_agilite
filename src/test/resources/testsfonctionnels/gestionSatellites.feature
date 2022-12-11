@@ -11,11 +11,11 @@ Feature: US_004 Ajout et suppression de satellites autour d-une planete
     Then Le satellite <estEnOrbite> dans la liste de satellite
 
     Examples: 
-      | planete | satellite | estEnOrbite        |
-      | terre   | lune      | luneEstEnOrbite    |
-      | pluton  | charon    | charonEstEnOrbite  |
-      | neptune | triton    | tritonEstEnOrbite  |
-      | neptune | nereide   | nereideEstEnOrbite |
+      | satellite | estEnOrbite |
+      | "lune"    | true        |
+      | "charon"  | true        |
+      | "triton"  | true        |
+      | "nereide" | true        |
 
   Scenario Outline: Un satellite est sorti de l-orbite d-une planete
     Given Une <planete> avec une temperature et un diametre standard
@@ -23,7 +23,7 @@ Feature: US_004 Ajout et suppression de satellites autour d-une planete
     Then Le satellite <estEnOrbite> dans la liste de satellite
 
     Examples: 
-      | planete | satellite | estEnOrbite             |
-      | terre   | lune      | luneNEstPlusEnOrbite    |
-      | neptune | triton    | tritonNEstPlusEnOrbite  |
-      | neptune | nereide   | nereideNEstPlusEnOrbite |
+      | satellite | estEnOrbite |
+      | "lune"     | false        |
+      | "triton"    | false        |
+      | "nereide"   | false        |

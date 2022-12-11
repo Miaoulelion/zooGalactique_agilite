@@ -11,9 +11,9 @@ Feature: US_003 Approximation du diametre d-un noyau
     Then Le noyau de <planete> a un diametre approxime de diam= <DiametreApproxime> km
 
     Examples: 
-      | planete       | noyau       | temperature | DiametreApproxime |
-      | planeteRose   | noyauRose   |          50 |                75 |
-      | planeteVerte  | noyauVert   |         500 |               300 |
+      | temperature | DiametreApproxime |
+      |          50 |                75 |
+      |         500 |               300 |
 
   Scenario Outline: Approximer le diamemetre du noyau d-une planete avec des diametres differents
     Given Une <planete> avec un <noyau> et une temperature et un diametre standard
@@ -21,6 +21,6 @@ Feature: US_003 Approximation du diametre d-un noyau
     Then Le noyau de la planete <planete> a un diametre approxime de diam= <DiametreApproximeBis> km
 
     Examples: 
-      | planete      | noyau      | diametrePlanete | DiametreApproximeBis |
-      | planeteJaune | noyauJaune |            1000 |                  550 |
-      | planeteGrise | noyauGris  |            3000 |                 1550 |
+      | diametrePlanete | DiametreApproximeBis |
+      |            1000 |                  550 |
+      |            3000 |                 1550 |
