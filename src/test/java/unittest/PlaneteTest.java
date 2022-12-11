@@ -14,7 +14,7 @@ import zoo.Ville;
 public class PlaneteTest {
 
     private Planete planeteTerre;
-    @SuppressWarnings("unused")
+    private Planete planeteMars;
 	private Noyau noyauDeLaTerre;
     private Satellite lune;
     private Ville ville;
@@ -22,6 +22,7 @@ public class PlaneteTest {
     @Before
     public void setUp() {
         this.planeteTerre = new Planete();
+        this.planeteMars = new Planete(5000, 200);
         this.noyauDeLaTerre = new Noyau(planeteTerre);
         this.lune = new Satellite(planeteTerre, "lune");
         this.ville = new Ville();
@@ -35,6 +36,8 @@ public class PlaneteTest {
         this.planeteTerre.setTemperatureMoyenne(25);
         assertEquals(50,this.planeteTerre.getDiametre());
         assertEquals(25,this.planeteTerre.getTemperatureMoyenne());
+        assertEquals(5000, this.planeteMars.getDiametre());
+        assertEquals(200, this.planeteMars.getTemperatureMoyenne());
     }
     
     @Test
@@ -89,6 +92,61 @@ public class PlaneteTest {
     	
     	assertTrue(!this.planeteTerre.getVilles().contains(this.ville));
     	assertTrue(ville.getPlanete() == null);
+    }
+    
+    @Test
+    public void testSetVille() {
+    	Ville zorg = new Ville();
+    	LinkedList<Ville> lesVilles = new LinkedList<Ville>();
+    	lesVilles.add(zorg);
+    	lesVilles.add(ville);
+    	
+    	this.planeteTerre.setVille(lesVilles);
+    	
+    	assertTrue(this.planeteTerre.getVilles().contains(zorg));
+    	assertTrue(this.planeteTerre.getVilles().contains(ville));
+    	assertTrue(this.planeteTerre.getVilles().size() == 2);
+    }
+    
+	@SuppressWarnings("unlikely-arg-type")
+	@Test
+    public void testEquals() {
+    	Planete jupiter = new Planete(5000, 200);
+    	
+    	assertTrue(jupiter.equals(this.planeteMars));
+    	assertFalse(jupiter.equals(this.planeteTerre));
+    	
+    	assertFalse(jupiter.equals(null));
+    	assertTrue(jupiter.equals(jupiter));
+    	assertFalse(jupiter.equals(this.noyauDeLaTerre));
+    	
+    }
+    
+    @Test
+    public void testHashCode() {
+    	Planete planeteMarsBis = this.planeteMars;
+    	
+    	assertEquals(planeteMarsBis.hashCode(), this.planeteMars.hashCode());
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void testSetTemperature() {
+    	this.planeteTerre.setTemperatureMoyenne(-1);
+    }    
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void testSetDiametre() {
+    	this.planeteTerre.setDiametre(-1);
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void testSetNoyau() {
+    	this.planeteTerre.setNoyau(null);
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void testAddSatellite() {
+    	this.planeteTerre.addSatellite(null);
     }
     
     @After

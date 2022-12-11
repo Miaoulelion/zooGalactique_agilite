@@ -1,5 +1,6 @@
 package unittest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -9,6 +10,7 @@ import org.junit.Test;
 
 import planetes.Planete;
 import zoo.Ville;
+import zoo.Zoo;
 
 
 public class VilleTest {
@@ -16,6 +18,7 @@ public class VilleTest {
 	private Planete planeteMars;
 	private Ville paris;
 	private Ville marseille;
+	private Zoo zooBeauval;
 	
 	public VilleTest() {
 		
@@ -27,6 +30,7 @@ public class VilleTest {
 		planeteMars = new Planete();
 		paris = new Ville();
 		marseille = new Ville();
+		zooBeauval = new Zoo();
     }
 
     /**
@@ -38,7 +42,6 @@ public class VilleTest {
     public void tearDown(){
         //Lib�rez ici les ressources engag�es par setUp()
     }
-    
     
     @Test
     public void testSetPlanete() {
@@ -56,5 +59,16 @@ public class VilleTest {
     	
     }
     
+    @Test
+    public void testGetMontantAidesZoo() {
+    	zooBeauval.setNombreVisiteurs(20000);
+    	zooBeauval.setSuperficie(10000);
+    	paris.setUnZoo(zooBeauval);
+    	
+    	paris.getMontantAidesZoo();
+    	
+    	assertEquals(paris.getMontantAidesZooTotal(), 200000);
+    	
+    }
     
 }

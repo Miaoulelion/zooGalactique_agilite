@@ -117,6 +117,18 @@ public class ZooTest
     	zooBeauval.setListeAnimauxPresents(animauxDansZoo);
     	assertEquals(animauxDansZoo.size(), zooBeauval.getNombreAnimaux());
     }
+    
+    @Test
+    public void testSetNombreVisiteurs() {
+    	zooBeauval.setNombreVisiteurs(5000);
+    	assertEquals(zooBeauval.getNombreVisiteurs(), 5000);
+    }
+    
+    @Test
+    public void testSetSuperficie() {
+    	zooBeauval.setSuperficie(5000);
+    	assertEquals(zooBeauval.getSuperficie(), 5000);
+    }
 }
 
 
