@@ -11,8 +11,9 @@ import zoo.AnimalFactory;
 import zoo.Zoo;  
 
 public class GestionAnimauxSteps {
-	private Animal tigre = AnimalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
-	private Animal lion = AnimalFactory.build(AnimalFactory.AnimalChoix.LION);
+	AnimalFactory animalFactory = new AnimalFactory();
+	private Animal tigre = animalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
+	private Animal lion = animalFactory.build(AnimalFactory.AnimalChoix.LION);
 	private Zoo zoo = new Zoo();
 	
 	@Given("un zoo souhaitant ajouter un animal parmi ses animaux")

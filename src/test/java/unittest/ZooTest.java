@@ -43,9 +43,10 @@ public class ZooTest
         zooBeauval = new Zoo();
         beauval = new Ville();
         zooBeauval.setVille(beauval);
-        tigre = AnimalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
-    	lion = AnimalFactory.build(AnimalFactory.AnimalChoix.LION);
-    	singe = AnimalFactory.build(AnimalFactory.AnimalChoix.SINGE);
+        AnimalFactory animalFactory = new AnimalFactory();
+        tigre = animalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
+    	lion = animalFactory.build(AnimalFactory.AnimalChoix.LION);
+    	singe = animalFactory.build(AnimalFactory.AnimalChoix.SINGE);
     }
 
     /**
