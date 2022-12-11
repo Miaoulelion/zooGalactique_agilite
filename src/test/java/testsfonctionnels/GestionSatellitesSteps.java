@@ -12,7 +12,7 @@ public class GestionSatellitesSteps {
 	private Planete planete;
 	private Satellite satellite;
 	
-	@Given("Une <planete> avec une temperature et un diametre standard")
+	@Given("Une planete avec une temperature et un diametre standard")
 	public void une_planete_avec_une_temperature_et_un_diametre_standard() {
 	    // Write code here that turns the phrase above into concrete actions
 	    this.planete = new Planete();
@@ -32,8 +32,8 @@ public class GestionSatellitesSteps {
 	    Assert.assertTrue(this.planete.getSatellites().contains(this.satellite));
 	}
 
-	@When("de la suppression d-un {string} de l-orbite de la planete <planete>")
-	public void de_la_suppression_d_un_de_l_orbite_de_la_planete_planete(String string) {
+	@When("de la suppression d-un {string} de l-orbite de la planete")
+	public void de_la_suppression_d_un_de_l_orbite_de_la_planete(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 		this.satellite = new Satellite(string);
 	    this.planete.addSatellite(satellite);
