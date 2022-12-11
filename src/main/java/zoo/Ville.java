@@ -28,10 +28,18 @@ public class Ville
         this.unZoo = unZoo;
     }
     
+    /**
+     * On a potentiellement envie de connaitre sur quelle planete la ville se situe
+     * @return planete
+     */
     public Planete getPlanete() {
     	return this.planete;
     }
     
+    /**
+     * Méthode permettant d'associer une planete à une ville
+     * @param planete
+     */
     public void setPlanete(Planete planete) {
     	if(this.planete != null && !this.planete.getVilles().contains(this)) {
     		this.planete.addVille(this);

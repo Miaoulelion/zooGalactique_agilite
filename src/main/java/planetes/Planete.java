@@ -146,10 +146,18 @@ public class Planete {
 		}
 	}
 	
+	/**
+	 * On a potentiellement besoin de savoir toutes les villes de la planète
+	 * @return list de villes
+	 */
 	public LinkedList<Ville> getVilles() {
 		return this.villes;
 	}
 	
+	/**
+	 * Méthode permettant de définir la liste de villes complète de la planète
+	 * @param villes
+	 */
 	public void setVille(LinkedList<Ville> villes) {
         this.villes = villes;
         for(Ville uneVille : villes) {
@@ -157,6 +165,10 @@ public class Planete {
         }
 	}
 	
+	/**
+	 * Méthode permettant d'ajouter une ville à notre planète
+	 * @param ville
+	 */
 	public void addVille(Ville ville) {
 		if(!this.villes.contains(ville)) {
 			this.villes.add(ville);
@@ -164,6 +176,10 @@ public class Planete {
 		}
 	}
 	
+	/**
+	 * Méthode permettant de supprimer une ville de notre planète
+	 * @param ville
+	 */
 	public void deleteVille(Ville ville) {
 		if(this.villes.contains(ville)) {
 			ville.setPlanete(null);
