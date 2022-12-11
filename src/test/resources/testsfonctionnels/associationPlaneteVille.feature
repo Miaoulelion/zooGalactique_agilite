@@ -14,3 +14,7 @@ Feature: US_005 Associer une Ville a une Planete
   	When  une Planete veut ajouter une Ville
   	Then  la Ville fait desormais partie de la Planete et inversement
 
+	Scenario: Suppression d une Ville appartenant a une Planete
+    Given une Planete avec une Ville
+  	When  une Planete veut supprimer cette Ville
+  	Then  la Ville n appartient plus a la Planete et inversement

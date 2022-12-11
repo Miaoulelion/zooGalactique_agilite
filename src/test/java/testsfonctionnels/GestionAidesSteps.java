@@ -9,17 +9,21 @@ import zoo.Ville;
 
 public class GestionAidesSteps {
 	
-	private Ville ville = new Ville();
+	private Ville ville;
+	private int nbVisiteurs;
+	private int superficie;
 	
 	@Given("le calcul des aides en fonction de {int} et de {int}")
 	public void le_calcul_des_aides_en_fonction_de_et_de(Integer int1, Integer int2) {
-		ville.calculAides(int1, int2);
-	    Assert.assertTrue(this.ville != null);
+		ville = new Ville();
+		nbVisiteurs = int1;
+		superficie = int2;
+	    
 	}
 
 	@When("la ville le demande")
 	public void la_ville_le_demande() {
-	    Assert.assertTrue(this.ville != null);
+	    ville.calculAides(nbVisiteurs, superficie);
 	}
 
 	@Then("le {int} est calcule")

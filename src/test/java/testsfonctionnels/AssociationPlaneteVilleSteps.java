@@ -31,4 +31,25 @@ public class AssociationPlaneteVilleSteps {
 	    Assert.assertEquals(zorg.getPlanete(), mars);
 	}
 	
+	
+	@Given("une Planete avec une Ville")
+	public void une_Planete_avec_une_Ville() {
+	    // Write code here that turns the phrase above into concrete actions
+		mars = new Planete();
+	    zorg = new Ville();
+	    mars.addVille(zorg);
+	}
+
+	@When("une Planete veut supprimer cette Ville")
+	public void une_Planete_veut_supprimer_cette_Ville() {
+	    // Write code here that turns the phrase above into concrete actions
+	    mars.deleteVille(zorg);
+	}
+
+	@Then("la Ville n appartient plus a la Planete et inversement")
+	public void la_Ville_n_appartient_plus_a_la_Planete_et_inversement() {
+	    // Write code here that turns the phrase above into concrete actions
+	    Assert.assertTrue(!mars.getVilles().contains(zorg));
+	    Assert.assertTrue(zorg.getPlanete() == null);
+	}
 }

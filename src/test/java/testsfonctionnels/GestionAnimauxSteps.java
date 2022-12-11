@@ -11,23 +11,21 @@ import zoo.AnimalFactory;
 import zoo.Zoo;  
 
 public class GestionAnimauxSteps {
-	AnimalFactory animalFactory = new AnimalFactory();
-	private Animal tigre = animalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
-	private Animal lion = animalFactory.build(AnimalFactory.AnimalChoix.LION);
-	private Zoo zoo = new Zoo();
+	AnimalFactory animalFactory;
+	private Animal tigre;
+	private Animal lion ;
+	private Zoo zoo ;
 	
 	@Given("un zoo souhaitant ajouter un animal parmi ses animaux")
 	public void un_zoo_souhaitant_ajouter_un_animal_parmi_ses_animaux() {
-	    Assert.assertTrue(this.zoo != null);
-	    Assert.assertTrue(this.tigre != null);
-	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == false);
+		animalFactory = new AnimalFactory();
+		tigre = animalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
+		zoo = new Zoo();
 	}
 
 	@When("un zoo accueille un nouvel animal")
 	public void un_zoo_accueille_un_nouvel_animal() {
 		zoo.ajouterAnimal(tigre);
-		Assert.assertTrue(this.zoo != null);
-	    Assert.assertTrue(this.tigre != null);
 	}
 
 	@Then("un animal est dans la liste d animaux du zoo")
@@ -38,20 +36,16 @@ public class GestionAnimauxSteps {
 	
 	@Given("un zoo souhaitant connaitre le nombre d animaux presents en son sein")
 	public void un_zoo_souhaitant_connaitre_le_nombre_d_animaux_presents_en_son_sein() {
-		zoo.ajouterAnimal(tigre);
-		zoo.ajouterAnimal(lion);
-	    Assert.assertTrue(this.zoo != null);
-	    Assert.assertTrue(this.lion != null);
-	    Assert.assertTrue(this.tigre != null);
-	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(tigre) == true);
-	    Assert.assertTrue(this.zoo.getListeAnimauxPresents().contains(lion) == true);
+		animalFactory = new AnimalFactory();
+		tigre = animalFactory.build(AnimalFactory.AnimalChoix.TIGRE);
+		lion = animalFactory.build(AnimalFactory.AnimalChoix.LION);
+		zoo = new Zoo();
 	}
 
 	@When("quand il le souhaite")
 	public void quand_il_le_souhaite() {
-		Assert.assertTrue(this.zoo != null);
-	    Assert.assertTrue(this.lion != null);
-	    Assert.assertTrue(this.tigre != null);
+		zoo.ajouterAnimal(tigre);
+		zoo.ajouterAnimal(lion);
 	}
 
 	@Then("le zoo connait desormais son nombre d animaux")

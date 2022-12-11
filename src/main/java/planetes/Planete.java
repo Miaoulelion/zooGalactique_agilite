@@ -158,16 +158,16 @@ public class Planete {
 	}
 	
 	public void addVille(Ville ville) {
-		if(!villes.contains(ville)) {
-			villes.add(ville);
+		if(!this.villes.contains(ville)) {
+			this.villes.add(ville);
 			ville.setPlanete(this);
 		}
 	}
 	
 	public void deleteVille(Ville ville) {
-		if(villes.contains(ville)) {
-			villes.remove(ville);
+		if(this.villes.contains(ville)) {
 			ville.setPlanete(null);
+			this.villes.remove(ville);
 		}
 	}
 	

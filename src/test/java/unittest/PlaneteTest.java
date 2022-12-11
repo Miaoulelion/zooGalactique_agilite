@@ -79,6 +79,18 @@ public class PlaneteTest {
     	assertTrue(this.planeteTerre.getVilles().contains(this.ville));
     }
     
+    @Test
+    public void testDeleteVille() {
+    	this.planeteTerre.addVille(this.ville);
+    
+    	assertTrue(this.planeteTerre.getVilles().size() == 1);
+    	
+    	this.planeteTerre.deleteVille(this.ville);
+    	
+    	assertTrue(!this.planeteTerre.getVilles().contains(this.ville));
+    	assertTrue(ville.getPlanete() == null);
+    }
+    
     @After
     public void tearDown()
     {

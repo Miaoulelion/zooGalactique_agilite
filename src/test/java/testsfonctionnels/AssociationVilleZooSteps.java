@@ -10,22 +10,18 @@ import zoo.Zoo;
 
 public class AssociationVilleZooSteps {
 
-	private Ville ville = new Ville();
-	private Zoo zoo = new Zoo();
+	private Ville ville;
+	private Zoo zoo;
 	
 	@Given("une ville sans Zoo")
 	public void une_ville_sans_Zoo() {
-		Assert.assertTrue(this.ville != null);
-		Assert.assertTrue(this.ville.getUnZoo() == null);
-		Assert.assertTrue(this.zoo != null);
-		Assert.assertTrue(this.zoo.getVille() == null);
+		ville = new Ville();
+		zoo = new Zoo();
 	}
 
 	@When("une ville s associe a un zoo")
 	public void une_ville_s_associer_a_un_zoo() {
 		ville.setUnZoo(zoo);
-		Assert.assertTrue(this.ville != null);
-		Assert.assertTrue(this.zoo != null);
 	}
 
 	@Then("le zoo appartient a la ville")
